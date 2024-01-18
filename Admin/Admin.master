@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="head">
+        
+    
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/img/ehuse700.png" />
+    
+    </div><div id="main"><div id="menu">
+        <table class="tbll">
+            <tr>
+                <td class="tblhead">
+                    Welcome</td>
+            </tr>
+            <tr>
+                <td style="text-align: center">
+                    <asp:Label ID="lblname" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button1" runat="server" CssClass="btn1" Font-Size="Medium" PostBackUrl="~/Admin/AddSociety.aspx"
+                        Height="40px" Text="ADD SOCIETY" Width="100%" CausesValidation="False" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button2" runat="server" CssClass="btn1" Font-Size="Medium" PostBackUrl="~/Admin/AddHouse.aspx"
+                        Height="40px" Text="ADD HOUSE" Width="100%" CausesValidation="False" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button4" runat="server" CssClass="btn1" Font-Size="Medium" 
+                        Height="40px" Text="HOUSE REPORT" Width="100%" CausesValidation="False" PostBackUrl="~/Admin/VHouse.aspx" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button3" runat="server" CssClass="btn1" Font-Size="Medium" PostBackUrl="~/Admin/AddMember.aspx"
+                        Height="40px" Text="ALLOCATE  HOUSE" Width="100%" 
+                        CausesValidation="False" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button5" runat="server" CssClass="btn1" Font-Size="Medium" 
+                        Height="40px" Text="MEMBER REPORT" Width="100%" CausesValidation="False" PostBackUrl="~/Admin/VMember.aspx" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button6" runat="server" CssClass="btn1" Font-Size="Medium" 
+                        Height="40px" Text="COMPLAIN" Width="100%" CausesValidation="False" PostBackUrl="~/Admin/Complain.aspx" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button7" runat="server" CssClass="btn1" Font-Size="Medium" 
+                        Height="40px" Text="SELL HOUSE REPORT" Width="100%" 
+                        CausesValidation="False" PostBackUrl="~/Admin/VSell.aspx" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button8" runat="server" CssClass="btn1" Font-Size="Medium" 
+                        Height="40px" Text="RENT HOUSE REPORT" Width="100%" 
+                        CausesValidation="False" PostBackUrl="~/Admin/VRent.aspx"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button9" runat="server" CssClass="btn1" Font-Size="Medium" 
+                        Height="40px" Text="LOG OUT" Width="100%" 
+                        CausesValidation="False" PostBackUrl="~/Admin/Home.aspx" BackColor="Red"/>
+                </td>
+            </tr>
+        </table>
+        </div><div id="cnt"><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder></div></div>
+    </form>
+</body>
+</html>

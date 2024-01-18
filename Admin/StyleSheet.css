@@ -1,0 +1,151 @@
+﻿body 
+{
+    font-family:Verdana;
+}
+
+#head
+{
+    width:1100px;
+    margin:0 auto;
+    height:130px;
+    border-bottom: solid 2px #11B300;
+    text-align: center;
+   box-shadow:0px 0px 15px 0px #ff9000;
+}
+
+#login
+{
+    margin:0 auto;
+    height:200px;
+    width:300px;
+    
+    margin-top:150px;
+    
+      box-shadow:0px 0px 15px 0px #ff9000;
+    }
+    
+.tbl
+{
+    width:100%;
+    
+    
+    }
+    .tbll
+{
+    border:solid 1px #11B300;
+    width:100%;
+    
+    
+    }
+    .tblhead
+    {
+       background:#11B300;
+       height:28px;
+       font-weight:bold;
+       text-align:center;
+       color:#fff;
+        }
+    
+    .txt
+    {
+         height:20px;
+    width:120px;
+       
+     border: solid 1px #11B300;
+      box-shadow:0px 0px 0px 0px #ff9000;
+        
+        }
+        .txt:focus
+        {
+           height:20px;
+    width:120px;
+       
+     border-bottom: solid 2px #11B300;
+      box-shadow:0px 0px 10px 0px #ff9000; 
+            }
+              .txt1
+    {
+         height:25px;
+    width:180px;
+       
+     border: solid 1px #11B300;
+      box-shadow:0px 0px 0px 0px #ff9000;
+        
+        }
+        .txt1:focus
+        {
+           height:25px;
+    width:180px;
+       
+     border-bottom: solid 2px #11B300;
+      box-shadow:0px 0px 10px 0px #ff9000; 
+            }
+.lbl
+{
+    text-align:right;
+    color:#333;
+    
+    }
+    
+    .btn
+    {
+        background:#11B300;
+        height:30px;
+        color:#fff;
+        font-weight:bold;
+        border:solid 1px #ff9000;
+        }
+        
+       .btn:hover
+    {   border:solid 1px #11B300;
+        background:#ff9000;
+        height:30px;
+        color:#fff;
+        font-weight:bold;transition: background-color 1s ease;
+         cursor:pointer;
+        }
+        
+        .btn1:hover
+    {
+        background:#11B300;
+        height:30px;
+        color:#fff;
+        font-weight:bold;
+        border:solid 1px #ff9000;  
+        }
+        
+       .btn1
+    {   border:solid 1px #11B300;
+        background:#ff9000;
+        height:30px;
+        color:#fff;
+        font-weight:bold;
+         transition: background-color 1s ease;
+         cursor:pointer;
+        }
+        #main
+{
+    width:1100px;
+    margin:0 auto;
+    height:auto;
+    border-bottom: solid 2px #11B300;
+ 
+   box-shadow:0px 0px 15px 0px #ff9000;
+}
+
+#menu
+{
+    width:250px;
+    height:490px;
+    float:left;
+    margin-top:10px;
+      
+    }
+    #cnt
+{
+    width:840px;
+    height:auto;
+    float:left;
+      margin-top:10px;
+    margin-left:5px;
+    }
