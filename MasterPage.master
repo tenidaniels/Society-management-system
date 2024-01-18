@@ -1,0 +1,124 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="head">
+        
+    
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/img/ehuse700.png" />
+    
+    </div><div id="main"><div id="menu">
+        <table class="tbl" 
+            style="border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: #009933">
+            <tr>
+                <td class="tblhead" colspan="2">
+                    Member Login Area</td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    <asp:Label ID="lbllogin" runat="server" Font-Size="10pt" ForeColor="Red"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="lbl">
+                    UserName :
+                </td>
+                <td>
+                    <asp:TextBox ID="txtuname" runat="server" CssClass="txt"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="lbl">
+                    Password :
+                </td>
+                <td>
+                    <asp:TextBox ID="txtupass" runat="server" CssClass="txt" TextMode="Password"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    <asp:Button ID="btnlogin" runat="server" CssClass="btn" 
+                        onclick="btnlogin_Click" Text="Login" Width="70px" 
+                        CausesValidation="False" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    <asp:LinkButton ID="LinkButton1" runat="server" Font-Size="12px" CssClass="lnk" 
+                        PostBackUrl="~/FPassword.aspx">Forgot Password ?</asp:LinkButton>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <table class="tbl">
+            <tr>
+                <td class="tblhead">
+                    Society List</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+                        ShowHeader="False" style="text-align: center" Width="99%" 
+                        BackColor="#FFFFCC" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" 
+                        CellPadding="4" Font-Bold="False" ForeColor="Green" GridLines="Horizontal" 
+                        onrowcommand="GridView1_RowCommand">
+                        <Columns>
+                   <asp:TemplateField HeaderText="">
+                   <ItemTemplate>
+                   <asp:LinkButton ID="lnks" runat="server" Text='<%#Eval("sname") %>' CommandArgument='<%#Eval("sname") %>' CausesValidation="false" ForeColor="Green" Font-Underline="false"></asp:LinkButton>
+                   </ItemTemplate>
+                   </asp:TemplateField>
+                        </Columns>
+                        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                        <RowStyle ForeColor="#006600" />
+                        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                        <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                        <SortedDescendingHeaderStyle BackColor="#242121" />
+                    </asp:GridView>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+        </table>
+        </div><div id="cnt"><div id="mnu">
+            <asp:Button ID="Button1" runat="server" CssClass="btn" Text="HOME" 
+                Width="130px" CausesValidation="False" PostBackUrl="~/Default.aspx" />
+            
+            <asp:Button ID="Button3" runat="server" CssClass="btn" Text="SEARCH" 
+                Width="130px" CausesValidation="False" PostBackUrl="~/Search.aspx" />
+            <asp:Button ID="Button4" runat="server" CssClass="btn" Text="RENT LIST" 
+                Width="140px" CausesValidation="False" PostBackUrl="~/Rentlist.aspx" />
+            <asp:Button ID="Button5" runat="server" CssClass="btn" Text="SELL LIST" 
+                Width="140px" CausesValidation="False" PostBackUrl="~/Selllist.aspx" />
+                <asp:Button ID="Button2" runat="server" CssClass="btn" Text="ADMIN" 
+                Width="130px" CausesValidation="False" PostBackUrl="~/Admin/Home.aspx" />
+            <asp:Button ID="Button6" runat="server" CssClass="btn" Text="CONTACT US" 
+                Width="140px" CausesValidation="False" />
+            </div><div id="cnt1"><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder></div></div></div>
+        <div id="footer">All Rights Reseverd @ Housing Helping Society</div>
+    </form>
+</body>
+</html>

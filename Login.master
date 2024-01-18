@@ -1,0 +1,148 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Login.master.cs" Inherits="Login" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+       
+        .style1
+        {
+            height: 24px;
+        }
+        .style2
+        {
+            height: 25px;
+        }
+        .style3
+        {
+            height: 26px;
+        }
+        .style4
+        {
+            height: 27px;
+        }
+        .style5
+        {
+            height: 28px;
+        }
+       
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="lhead">
+        
+    
+        <table class="style1">
+            <tr>
+                <td class="style2">
+        
+    
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/img/ehuse700.png" 
+            Height="54px" Width="507px" />
+    
+                </td>
+                <td class="style4">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                <td>
+                    <table class="style3">
+                        <tr>
+                            <td class="style5">
+                                <asp:LinkButton ID="LinkButton1" runat="server" Font-Bold="True" 
+                                    ForeColor="Red" onclick="LinkButton1_Click" CausesValidation="False">Log Out</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="LinkButton2" runat="server" Font-Size="10pt" 
+                                    ForeColor="#006600" PostBackUrl="~/Message.aspx" CausesValidation="False">My Message</asp:LinkButton>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    
+    </div><div id="main"><div id="menu">
+        <table class="tbl" 
+            style="border-bottom-style: solid; border-bottom-width: thin; border-bottom-color: #009933">
+            <tr>
+                <td class="tblhead">
+                    Welcome 
+                    <asp:Label ID="lblname" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td style="text-align: center">
+                    <asp:Image ID="Image2" runat="server" Height="168px" />
+                </td>
+            </tr>
+            </table>
+        <br />
+        <table class="tbl">
+            <tr>
+                <td class="tblhead">
+                    Society List</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+                        ShowHeader="False" style="text-align: center" Width="99%" 
+                        BackColor="#FFFFCC" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" 
+                        CellPadding="4" Font-Bold="False" ForeColor="Green" GridLines="Horizontal" 
+                        onrowcommand="GridView1_RowCommand">
+                        <Columns>
+                   <asp:TemplateField HeaderText="">
+                   <ItemTemplate>
+                   <asp:LinkButton ID="lnks" runat="server" Text='<%#Eval("sname") %>' CommandArgument='<%#Eval("sname") %>' CausesValidation="false" ForeColor="Green" Font-Underline="false"></asp:LinkButton>
+                   </ItemTemplate>
+                   </asp:TemplateField>
+                        </Columns>
+                        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                        <RowStyle ForeColor="#006600" />
+                        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                        <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                        <SortedDescendingHeaderStyle BackColor="#242121" />
+                    </asp:GridView>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+        </table>
+        </div><div id="cnt"><div id="mnu">
+            <asp:Button ID="Button1" runat="server" CssClass="btn" Text="HOME" 
+                Width="130px" CausesValidation="False" PostBackUrl="~/LHome.aspx" />
+            <asp:Button ID="Button2" runat="server" CssClass="btn" Text="MY ACCOUNT" 
+                Width="130px" CausesValidation="False" PostBackUrl="~/MyAccount.aspx" />
+            <asp:Button ID="Button3" runat="server" CssClass="btn" Text="COMPLAIN" 
+                Width="130px" CausesValidation="False" onclick="Button3_Click" 
+                PostBackUrl="~/Complain.aspx" />
+            <asp:Button ID="Button4" runat="server" CssClass="btn" Text="RENT LIST" 
+                Width="140px" CausesValidation="False" PostBackUrl="~/MyRent.aspx" />
+            <asp:Button ID="Button5" runat="server" CssClass="btn" Text="SELL LIST" 
+                Width="140px" CausesValidation="False" PostBackUrl="~/MySell.aspx" />
+            <asp:Button ID="Button6" runat="server" CssClass="btn" Text="PASSWORD" 
+                Width="140px" CausesValidation="False" onclick="Button6_Click" 
+                PostBackUrl="~/ChangePassword.aspx" />
+            </div><div id="cnt1"><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder></div></div></div>
+        <div id="footer">All Rights Reseverd @ Housing Helping Society</div>
+    </form>
+</body>
+</html>
